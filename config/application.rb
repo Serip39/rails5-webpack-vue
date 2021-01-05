@@ -29,5 +29,13 @@ module App
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # rails generate command
+    config.generators do |g|
+      g.assets false          # generate CSS, JavaScript file
+      g.skip_routes false     # update routes.rb
+      g.test_framework false  # generate test file
+      g.helper false # generate helper file
+    end
   end
 end
